@@ -7,6 +7,10 @@
 
 A modern, responsive QR Code Generator built with React, TypeScript, and Vite. This application allows users to generate customizable QR codes with various options including size, colors, and error correction levels.
 
+## Live Demo
+
+Check out the live demo: [QR Code Generator](https://qr-code-beige-mu.vercel.app/)
+
 ## Features
 
 - Generate QR codes from text or URLs
