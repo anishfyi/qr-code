@@ -60,7 +60,7 @@ const QRCodeGenerator = () => {
     <div className="grid gap-8 lg:grid-cols-2">
       <div className="space-y-6">
         <div>
-          <label htmlFor="value" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="value" className="block text-sm font-medium text-neutral-700 mb-1">
             Text or URL
           </label>
           <input
@@ -70,12 +70,12 @@ const QRCodeGenerator = () => {
             value={settings.value}
             onChange={handleInputChange}
             placeholder="Enter text or URL"
-            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-2 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-neutral-500 focus:border-transparent transition-all duration-200"
           />
         </div>
 
         <div>
-          <label htmlFor="size" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="size" className="block text-sm font-medium text-neutral-700 mb-1">
             Size (px)
           </label>
           <input
@@ -86,13 +86,13 @@ const QRCodeGenerator = () => {
             onChange={handleInputChange}
             min="100"
             max="1000"
-            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-2 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-neutral-500 focus:border-transparent transition-all duration-200"
           />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="fgColor" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="fgColor" className="block text-sm font-medium text-neutral-700 mb-1">
               Foreground Color
             </label>
             <input
@@ -101,12 +101,12 @@ const QRCodeGenerator = () => {
               name="fgColor"
               value={settings.fgColor}
               onChange={handleInputChange}
-              className="w-full h-10 rounded-lg border border-gray-300 cursor-pointer"
+              className="w-full h-10 rounded-lg border border-neutral-300 cursor-pointer"
             />
           </div>
 
           <div>
-            <label htmlFor="bgColor" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="bgColor" className="block text-sm font-medium text-neutral-700 mb-1">
               Background Color
             </label>
             <input
@@ -115,13 +115,13 @@ const QRCodeGenerator = () => {
               name="bgColor"
               value={settings.bgColor}
               onChange={handleInputChange}
-              className="w-full h-10 rounded-lg border border-gray-300 cursor-pointer"
+              className="w-full h-10 rounded-lg border border-neutral-300 cursor-pointer"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="level" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="level" className="block text-sm font-medium text-neutral-700 mb-1">
             Error Correction Level
           </label>
           <select
@@ -129,7 +129,7 @@ const QRCodeGenerator = () => {
             name="level"
             value={settings.level}
             onChange={handleInputChange}
-            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-2 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-neutral-500 focus:border-transparent transition-all duration-200"
           >
             <option value="L">Low (7%)</option>
             <option value="M">Medium (15%)</option>
@@ -140,7 +140,7 @@ const QRCodeGenerator = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center space-y-6">
-        <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+        <div className="p-6 bg-white rounded-xl shadow-lg border border-neutral-100">
           {settings.value ? (
             <QRCodeSVG
               value={settings.value}
@@ -151,7 +151,7 @@ const QRCodeGenerator = () => {
               includeMargin={true}
             />
           ) : (
-            <div className="w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center text-gray-400 border-2 border-dashed border-gray-200 rounded-lg">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center text-neutral-400 border-2 border-dashed border-neutral-200 rounded-lg">
               QR Code Preview
             </div>
           )}
@@ -160,7 +160,7 @@ const QRCodeGenerator = () => {
         <button
           onClick={handleDownload}
           disabled={!settings.value}
-          className="w-full sm:w-auto px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full sm:w-auto px-6 py-3 bg-neutral-800 text-white rounded-lg font-medium hover:bg-neutral-900 focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           <ArrowDownTrayIcon className="h-5 w-5" />
           Download QR Code
