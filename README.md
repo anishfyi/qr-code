@@ -1,6 +1,6 @@
 ## Author
 
-**Anish Kr Singh**  [anishfyi.github.io](https://anishfyi.github.io)
+**Anish Kr Singh** ([anishfyi.github.io](https://anishfyi.github.io))
 
 # QR Code Generator
 
